@@ -1,0 +1,52 @@
+INSTALLATION
+
+
+1. 	Aktuelle Version von Text2skin installieren:
+
+ 	cd $VDRDIR/PLUGINS/src
+	git clone git://projects.vdr-developer.org/vdr-plugin-text2skin.git
+	
+	cd ../../../
+	make plugins
+	make plugins install
+
+	
+2. 	Das Skinarchiv in ein beliebiges Verzeichnis entpacken
+	cd PearlHD
+	Die Make.config Datei anpassen.
+	make (or "make PREFIX=/your/prefix install")
+	make install 
+	
+3. ADDONS
+
+Um die Beschriftung der Farbigen Knöpfe in der Kanalanzeige zu verändern muss die Make.config geändert werden.
+
+ADDON CRYPTSYMBOLS (von bexbier):
+
+Die git Version von text2skin muss gepatcht werden. Patch und die dazugehörigen Symbole finden sich hier:
+http://www.vdr-portal.de/board/thread.php?postid=845196#post845196
+
+
+4. VDR, XINE und XINELIBOUTPUT Einstellungen (vdr/setup.conf)
+
+OSDAspect = 1,000000
+OSDHeight = 1080
+OSDHeightP = 1,000000
+OSDLanguage = de_DE
+OSDLeft = 0
+OSDLeftP = 0,000000
+OSDSkin = PearlHD
+OSDTop = 0
+OSDTopP = 0,000000
+OSDWidth = 1920
+OSDWidthP = 1,000000
+ShowReplayMode = 1
+xine.osdExtent.X = 1920
+xine.osdExtent.Y = 1080
+xine.osdMode = osdBlendScaledAuto
+xine.transparencyMode = transparencyOn
+xineliboutput.OSD.Size = 1920x1080
+xineliboutput.OSD.SoftOSD = 1
+
+Das Skin läuft auch auf HDready Hardware. Dafür muss die Auflösung im softdevice angepasst werden.
+
