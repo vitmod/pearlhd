@@ -1,9 +1,9 @@
 Description = White
 Bar = AAe07db5
-FontColorInactive = 99e031a4
+FontColorInactive = FFe031a4
 BarFill = AAb70067
 BarBlock = AAFFFFFF
-FontColor = EEe031a4
+FontColor = FFe031a4
 FontColorInverse = FF000000
 MainSolid = CCffffff
 MainLight = A0ffffff
