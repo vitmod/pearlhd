@@ -51,6 +51,9 @@ i18n: $(I18Npo:%.po=$(LOCALEDIR)/%/LC_MESSAGES/vdr-text2skin-$(SKIN).mo)
 
 PearlHD.skin: 
 	@cp $(SKIN).template $(SKIN).skin
+	@if [ "$(CHANNELLOGOJPG)" = "1" ]; then sed 's/{ChannelName}.png/{ChannelName}.jpg/g' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
+	@if [ "$(EPGIMAGESJPG)" = "1" ]; then sed 's/{PresentEventID}.png/{PresentEventID}.jpg/g' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
+	
 	@if [ "$(CRYPTSYMBOLS)" = "" ]; then sed -e '/CRYPTSYMBOLS/d' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
 	@if [ "$(RECTITLEINFOHEAD)" = "" ]; then sed -e '/RECTITLEINFOHEAD/d' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
 	@if [ "$(RECTITLEINFOBOTTOM)" = "" ]; then sed -e '/RECTITLEINFOBOTTOM/d' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
@@ -69,8 +72,8 @@ PearlHD.skin:
 	
 	@cp $(SKIN).tmp $(SKIN).skin
 	@if [ "$(DYNAMICFONTS)" = "1" ]; then\
-	 cat $(SKIN).skin | sed 's/VDRSymbols Sans:Book@27/sml/g' > $(SKIN).tmp;\
-	 cat $(SKIN).tmp | sed 's/VDRSymbols Sans:Book@37/osd/g' > $(SKIN).skin;\
+	 cat $(SKIN).skin | sed 's/VDRSymbols Sans:Book@27/Sml/g' > $(SKIN).tmp;\
+	 cat $(SKIN).tmp | sed 's/VDRSymbols Sans:Book@37/Osd/g' > $(SKIN).skin;\
 	fi 
 	@if [ $(OSDWIDTH) != "1920"  ]; then perl res/convert.pl $(SKIN).skin $(OSDWIDTH)  > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
 	@if [ $(OSDWIDTH) = "1920"  ]; then cat $(SKIN).skin | sed 's/y1="-134" y2="-100" bpp="8"/y1="-135" y2="-100" bpp="8"/' > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 

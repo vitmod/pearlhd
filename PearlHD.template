@@ -143,7 +143,7 @@
    <block>
     <rectangle x1="240" x2="-240" y1="-270" y2="-55" color="MainSolid" />
 
-<!-- CHANNELLOGO -->    <image x1="360" x2="424" y1="-342"  y2="-390" alpha="204" condition="file('hqlogos//{ChannelName}.png')" path="hqlogos//{ChannelName}.png" />
+<!-- CHANNELLOGO -->    <image x1="360" x2="424" y1="-342"  y2="-390" alpha="144" condition="file('hqlogos//{ChannelName}.png')" path="hqlogos//{ChannelName}.png" />
 <!-- CHANNELLOGO -->    <text x1="480" x2="-460" y1="-335" y2="-250" color="FontColor" condition="not({ChannelNumber})" font="VDRSymbols Sans:Book@37" >{ChannelName} </text>
 <!-- CHANNELLOGO -->    <text x1="480" x2="-460" y1="-335" y2="-250" color="FontColor" condition="{ChannelNumber}" font="VDRSymbols Sans:Book@37" >{ChannelNumber} - {ChannelName} </text>
 <!-- NOCHANNELLOGO -->    <text x1="360" x2="480" y1="-330" y2="-250" color="FontColor" font="VDRSymbols Sans:Book@27" >{ChannelNumber}</text>

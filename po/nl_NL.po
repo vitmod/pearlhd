@@ -1,11 +1,11 @@
-# German translations for vdr-text2skin-PearlHD skin.
-# Copyright (C) 2009 mapovi
+# NL translations for vdr-text2skin-PearlHD skin.
+# Copyright (C) 2009 carel
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: vdr-text2skin-PearlHD 0.0.4\n"
 "Report-Msgid-Bugs-To: <don_jan@web.de>\n"
-"POT-Creation-Date: 2009-10-23 16:49+0200\n"
+"POT-Creation-Date: 2009-10-27 15:42+0100\n"
 "PO-Revision-Date: 2009-10-23 22:26+0100\n"
 "Last-Translator: carel.willemse@online.nl\n"
 "Language-Team:  don_jan@web.de\n"
@@ -64,17 +64,17 @@ msgstr "Commando's"
 msgid "oClock"
 msgstr "u"
 
-msgid "Conflicting Timers"
-msgstr "Timerconflicten"
-
-msgid "till"
-msgstr "tot"
-
 msgid "length"
 msgstr "lengte"
 
 msgid "cutted"
 msgstr "bewerkt"
+
+#~ msgid "Conflicting Timers"
+#~ msgstr "Timerconflicten"
+
+#~ msgid "till"
+#~ msgstr "tot"
 
 #~ msgid "RECTITLEINFOTOP"
 #~ msgstr "NO"
@@ -96,22 +96,6 @@ msgstr "bewerkt"
 
 #~ msgid "BUTTON_4"
 #~ msgstr "Button 4"
-
-#, fuzzy
-#~ msgid "Timer"
-#~ msgstr "Timer"
-
-#~ msgid "BUTTON_1"
-#~ msgstr "Knop 1"
-
-#~ msgid "BUTTON_2"
-#~ msgstr "Knop 2"
-
-#~ msgid "BUTTON_3"
-#~ msgstr "Knop 3"
-
-#~ msgid "BUTTON_4"
-#~ msgstr "Knop 4"
 
 #~ msgid "Rec:"
 #~ msgstr "Rec:"
@@ -139,4 +123,3 @@ msgstr "bewerkt"
 
 #~ msgid "Audio Channel"
 #~ msgstr "Audiokanaal"
-
