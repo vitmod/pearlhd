@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vdr-text2skin-PearlHD 0.0.4\n"
 "Report-Msgid-Bugs-To: <don_jan@web.de>\n"
-"POT-Creation-Date: 2009-10-23 15:45+0200\n"
+"POT-Creation-Date: 2009-11-28 16:23+0100\n"
 "PO-Revision-Date: 2009-11-14 19:09+0100\n"
 "Last-Translator: Diego Pierotto <vdr-italian@tiscali.it>\n"
 "Language-Team: don_jan@web.de\n"
@@ -75,16 +75,21 @@ msgstr "ridotta"
 
 #~ msgid "RECTITLEINFOTOP"
 #~ msgstr "NO"
+
 #~ msgid "RECTITLEINFOBOTTOM"
 #~ msgstr "YES"
+
 #~ msgid "RECTITLEINFO"
 #~ msgstr "NO"
+
 #~ msgid "BUTTON_1"
 #~ msgstr "Button 1"
+
 #~ msgid "BUTTON_2"
 #~ msgstr "Button 2"
+
 #~ msgid "BUTTON_3"
 #~ msgstr "Button 3"
+
 #~ msgid "BUTTON_4"
 #~ msgstr "Button 4"
-

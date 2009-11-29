@@ -146,7 +146,7 @@
 <!-- CHANNELLOGO -->    <image x1="360" x2="424" y1="-342"  y2="-390" alpha="144" condition="file('hqlogos//{ChannelName}.png')" path="hqlogos//{ChannelName}.png" />
 <!-- CHANNELLOGO -->    <text x1="480" x2="-460" y1="-335" y2="-250" color="FontColor" condition="not({ChannelNumber})" font="VDRSymbols Sans:Book@37" >{ChannelName} </text>
 <!-- CHANNELLOGO -->    <text x1="480" x2="-460" y1="-335" y2="-250" color="FontColor" condition="{ChannelNumber}" font="VDRSymbols Sans:Book@37" >{ChannelNumber} - {ChannelName} </text>
-<!-- NOCHANNELLOGO -->    <text x1="360" x2="480" y1="-330" y2="-250" color="FontColor" font="VDRSymbols Sans:Book@27" >{ChannelNumber}</text>
+<!-- NOCHANNELLOGO -->    <text x1="360" x2="480" y1="-327" y2="-250" color="FontColor" font="VDRSymbols Sans:Book@27" >{ChannelNumber}</text>
 <!-- NOCHANNELLOGO -->    <text x1="480" x2="-460" y1="-335" y2="-250" color="FontColor" font="VDRSymbols Sans:Book@37" >{ChannelName}</text>
     <!-- CRYPTSYMBOLS 
 <!--CRYPTSYMBOLS-->    <block >
@@ -288,7 +288,7 @@
 <!-- RCHANNELLOGO -->     <image x1="-365" x2="-265" y1="-245"  y2="-145" alpha="204" condition="file('hqlogos//{ChannelName}.png')" path="hqlogos//{ChannelName}.png" />
 
 <!-- PRESENT-->
-    <text x1="360" x2="480" y1="-243" y2="-205" color="FontColor" font="VDRSymbols Sans:Book@27" >{PresentStartDateTime:%H\:%M} </text>
+    <text x1="360" x2="480" y1="-242" y2="-205" color="FontColor" font="VDRSymbols Sans:Book@27" >{PresentStartDateTime:%H\:%M} </text>
     <text x1="480" x2="-360" y1="-250" y2="-205" color="FontColor" font="VDRSymbols Sans:Book@37" condition="not({HasTimer})" >{PresentTitle}</text>
     <text x1="480" x2="-360" y1="-250" y2="-205" color="FontColor" font="VDRSymbols Sans:Book@37" condition="{HasTimer}" >{PresentTitle} *</text>
 <!-- NORCHANNELLOGO -->    <text x1="-360" x2="-285" y1="-245" y2="-205" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" condition="{PresentRemaining}" >{PresentRemaining:%m}</text>
@@ -296,7 +296,7 @@
     <text x1="480" x2="-360" y1="-205" y2="-145" color="FontColor" font="VDRSymbols Sans:Book@27" >{PresentShortText}</text>
 <!-- PRESENT END-->
 <!-- NEXT  -->
-    <text x1="360" x2="480" y1="-148" y2="-110" color="FontColor" font="VDRSymbols Sans:Book@27" >{FollowingStartDateTime:%H\:%M}</text>
+    <text x1="360" x2="480" y1="-147" y2="-110" color="FontColor" font="VDRSymbols Sans:Book@27" >{FollowingStartDateTime:%H\:%M}</text>
     <text x1="480" x2="-360" y1="-155" y2="-110" color="FontColor" font="VDRSymbols Sans:Book@37" condition="not({FollowingHasTimer})" >{FollowingTitle}</text>
     <text x1="480" x2="-360" y1="-155" y2="-110" color="FontColor" font="VDRSymbols Sans:Book@37" condition="{FollowingHasTimer}" >{FollowingTitle} *</text>
 <!-- NORCHANNELLOGO -->    <text x1="-360" x2="-285" y1="-150" y2="-110" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" condition="{FollowingDuration}" >{FollowingDuration:%m} </text>
@@ -700,7 +700,11 @@
     <text x1="315" x2="-240" y1="257" y2="293" color="White" font="VDRSymbols Sans:Book@27" >{MessageWarning}</text>
     <text x1="315" x2="-240" y1="257" y2="293" color="White" font="VDRSymbols Sans:Book@27" >{MessageError}</text>
    </block>
-   
+  <!-- TIMERSWATCH -->     <block refresh="all,update,timeout,list,full" changed="{MenuTitle}{DateTime}{MessageInfo}{MessageStatus}{MessageWarning}{MessageError}" condition="and(and(and(and(and(not(equal({MenuTitle:clean},trans('Timers'))),not(equal({MenuTitle:clean},trans('Recordings')))),and(not(equal({MenuTitle:clean},trans('Edit timer'))),not(equal({MenuTitle:clean},trans('Setup'))))),and(and(not(equal({MenuTitle:clean},trans('Channels'))),not(equal({MenuTitle:clean},trans('Schedule')))),and(not(equal({MenuTitle:clean},trans('Commands'))),not(equal({MenuTitle:clean},'VDR'))))),not({RecordingTitle})),not({PresentTitle}))" >    
+  <!-- TIMERSWATCH -->  <text  x1="-540" x2="-330" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
+  <!-- TIMERSWATCH -->  <text  x1="-330" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
+    <!-- trans('oClock') -->
+  <!-- TIMERSWATCH -->   </block>
 <!-- SUBMENU END: Default -->
 
 <!-- SUBMENU: VDR, Commands -->
@@ -1011,6 +1015,12 @@
      <text x1="315" x2="-240" y1="257" y2="293" color="White" font="VDRSymbols Sans:Book@27" >{MessageWarning}</text>
      <text x1="315" x2="-240" y1="257" y2="293" color="White" font="VDRSymbols Sans:Book@27" >{MessageError}</text>
     </block>
+    <!-- TIMERSWATCH --><block refresh="all,update,timeout,list,full" changed="{MenuTitle}{DateTime}{MessageInfo}{MessageStatus}{MessageWarning}{MessageError}" condition="or(equal({MenuTitle:clean},trans('Recordings')),equal({MenuTitle:clean},trans('Timers')))" >    
+    <!-- TIMERSWATCH --><text  x1="-540" x2="-330" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
+    <!-- TIMERSWATCH --><text  x1="-330" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
+    <!-- trans('oClock') -->
+    <!-- TIMERSWATCH --> </block>
+    
 <!-- SUBMENU END: Recordings, Timers -->
 
 <!-- SUBMENU: EPG -->
