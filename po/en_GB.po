@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vdr-text2skin-PearlHD 0.0.4\n"
 "Report-Msgid-Bugs-To: <don_jan@web.de>\n"
-"POT-Creation-Date: 2009-11-28 16:23+0100\n"
+"POT-Creation-Date: 2009-12-24 00:31+0100\n"
 "PO-Revision-Date: 2009-10-03 12:38+0100\n"
 "Last-Translator: don_jan@web.de\n"
 "Language-Team:  don_jan@web.de\n"
@@ -59,6 +59,9 @@ msgid "Schedule"
 msgstr ""
 
 msgid "Commands"
+msgstr ""
+
+msgid "Learning Remote Control Keys"
 msgstr ""
 
 msgid "oClock"

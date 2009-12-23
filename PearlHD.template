@@ -669,7 +669,11 @@
   
 <!-- SUBMENU: Default -->
    <!-- Background -->
-   <block refresh="all,update,timeout,full,scroll,list" changed="{MenuTitle}{DateTime}{ChannelName}{PresentTitle}{ButtonYellow}{MenuText}"  condition="and(and(and(and(and(not(equal({MenuTitle:clean},trans('Timers'))),not(equal({MenuTitle:clean},trans('Recordings')))),and(not(equal({MenuTitle:clean},trans('Edit timer'))),not(equal({MenuTitle:clean},trans('Setup'))))),and(and(not(equal({MenuTitle:clean},trans('Channels'))),not(equal({MenuTitle:clean},trans('Schedule')))),and(not(equal({MenuTitle:clean},trans('Commands'))),not(equal({MenuTitle:clean},'VDR'))))),not({RecordingTitle})),not({PresentTitle}))" >
+   <block refresh="all,update,timeout,full,scroll" changed="{MenuTitle}{DateTime}{ChannelName}{PresentTitle}{ButtonYellow}"  condition="and(and(and(and(and(not(equal({MenuTitle:clean},trans('Timers'))),not(equal({MenuTitle:clean},trans('Recordings')))),and(not(equal({MenuTitle:clean},trans('Edit timer'))),not(equal({MenuTitle:clean},trans('Setup'))))),and(and(not(equal({MenuTitle:clean},trans('Channels'))),not(equal({MenuTitle:clean},trans('Schedule')))),and(not(equal({MenuTitle:clean},trans('Commands'))),not(equal({MenuTitle:clean},'VDR'))))),not({RecordingTitle})),not({PresentTitle}))" >
+    <rectangle x1="240" x2="-240" y1="252" y2="-135" color="MainLight" />
+    <text x1="315" x2="-750" y1="195" y2="-830" color="FontColor" font="VDRSymbols Sans:Book@37" >{MenuTitle:clean}</text>
+   </block>
+<block refresh="all,update,timeout,full,scroll,list" changed="{MenuTitle}{DateTime}{ChannelName}{PresentTitle}{ButtonYellow}{MenuText}" condition="or(equal({MenuTitle:clean},trans('Learning Remote Control Keys')),equal({MenuTitle:clean},'Fernbedienung anlernen'))" >
     <rectangle x1="240" x2="-240" y1="252" y2="-135" color="MainLight" />
     <text x1="315" x2="-750" y1="195" y2="-830" color="FontColor" font="VDRSymbols Sans:Book@37" >{MenuTitle:clean}</text>
    </block>
