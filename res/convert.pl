@@ -39,11 +39,12 @@ if (int($width)){
 					}
 				}
 				elsif  (@item[0] =~/font/){
+					if  (@item[1] =~/@/){
 					@font = split(/@/, @item[1]);
 					@font[1] =~ s/\"//g;
 					$newfs = int(@font[1] / $ratio);
 					@font[0]=~ s/_/ /g;
-					@item[1]=@font[0]."@".$newfs ."\"";
+					@item[1]=@font[0]."@".$newfs ."\"";}
 				}
 				print @item[0]."=".@item[1]." ";
 			} 
