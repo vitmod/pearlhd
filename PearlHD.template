@@ -688,9 +688,9 @@
     <ellipse   refresh="all,list,timeout,update" changed="{MenuTitle}{DateTime}{ButtonRed}{ButtonGreen}{ButtonYellow}{ButtonBlue}" x1="60" x2="74" y1="0" y2="15" condition="{IsMenuCurrent}" color="MainSolid" arc="2" /> 
     <rectangle refresh="all,list,timeout,update" changed="{MenuTitle}{DateTime}{ButtonRed}{ButtonGreen}{ButtonYellow}{ButtonBlue}" x1="60" x2="74" y1="14" y2="-21" condition="{IsMenuCurrent}" color="MainSolid" /> 
     <ellipse   refresh="all,list,timeout,update" changed="{MenuTitle}{DateTime}{ButtonRed}{ButtonGreen}{ButtonYellow}{ButtonBlue}" x1="60" x2="74" y1="-21" y2="-6" condition="{IsMenuCurrent}" color="MainSolid" arc="3" /> 
-    <text refresh="all,list,timeout,update" changed="{MenuTitle}{DateTime}{ButtonRed}{ButtonGreen}{ButtonYellow}{ButtonBlue}"  x1="75" x2="-21" y1="4" y2="22" color="FontColorInactive" font="VDRSymbols Sans:Book@27,85" >{MenuGroup}</text>
-    <text refresh="all,list,timeout,update" changed="{MenuTitle}{DateTime}{ButtonRed}{ButtonGreen}{ButtonYellow}{ButtonBlue}" x1="75" x2="-21" y1="6" y2="22" color="FontColorInactive" font="VDRSymbols Sans:Book@27,85" >{MenuItem}</text>
-    <text refresh="all,list,timeout,update" changed="{MenuTitle}{DateTime}{ButtonRed}{ButtonGreen}{ButtonYellow}{ButtonBlue}" x1="75" x2="-21" y1="6" y2="20" color="FontColor" font="VDRSymbols Sans:Book@27,250" >{MenuCurrent}</text>
+    <text refresh="all,list,timeout,update" changed="{MenuTitle}{DateTime}{ButtonRed}{ButtonGreen}{ButtonYellow}{ButtonBlue}"  x1="75" x2="-21" y1="4" y2="22" color="FontColorInactive" font="VDRSymbols Sans:Book@27" >{MenuGroup}</text>
+    <text refresh="all,list,timeout,update" changed="{MenuTitle}{DateTime}{ButtonRed}{ButtonGreen}{ButtonYellow}{ButtonBlue}" x1="75" x2="-21" y1="6" y2="22" color="FontColorInactive" font="VDRSymbols Sans:Book@27" >{MenuItem}</text>
+    <text refresh="all,list,timeout,update" changed="{MenuTitle}{DateTime}{ButtonRed}{ButtonGreen}{ButtonYellow}{ButtonBlue}" x1="75" x2="-21" y1="6" y2="20" color="FontColor" font="VDRSymbols Sans:Book@27" >{MenuCurrent}</text>
    </list> 
    
    <!-- Messages -->
@@ -1004,9 +1004,9 @@
      <ellipse   refresh="all,list,timeout" x1="60" x2="74" y1="0" y2="15" condition="{IsMenuCurrent}" color="MainSolid" arc="2" /> 
      <rectangle refresh="all,list,timeout" x1="60" x2="74" y1="14" y2="-21" condition="{IsMenuCurrent}" color="MainSolid" /> 
      <ellipse   refresh="all,list,timeout" x1="60" x2="74" y1="-21" y2="-6" condition="{IsMenuCurrent}" color="MainSolid" arc="3" /> 
-     <text refresh="all,list,timeout" x1="75" x2="-21" y1="4" y2="22" color="FontColorInactive" font="VDRSymbols Sans:Book@27,85" >{MenuGroup}</text>
-     <text refresh="all,list,timeout" x1="75" x2="-21" y1="6" y2="22" color="FontColorInactive" font="VDRSymbols Sans:Book@27,85" >{MenuItem}</text>
-     <text refresh="all,list,timeout" x1="75" x2="-21" y1="6" y2="20" color="FontColor" font="VDRSymbols Sans:Book@27,250" >{MenuCurrent}</text>
+     <text refresh="all,list,timeout" x1="75" x2="-21" y1="4" y2="22" color="FontColorInactive" font="VDRSymbols Sans:Book@27" >{MenuGroup}</text>
+     <text refresh="all,list,timeout" x1="75" x2="-21" y1="6" y2="22" color="FontColorInactive" font="VDRSymbols Sans:Book@27" >{MenuItem}</text>
+     <text refresh="all,list,timeout" x1="75" x2="-21" y1="6" y2="20" color="FontColor" font="VDRSymbols Sans:Book@27" >{MenuCurrent}</text>
     </list>
     <!-- Messages -->
     <block refresh="all,update,timeout,full" changed="{MessageInfo}{MessageStatus}{MessageWarning}{MessageError}" condition="and({Message},or(equal({MenuTitle:clean},trans('Recordings')),equal({MenuTitle:clean},trans('Timers'))) )" >
@@ -1094,7 +1094,7 @@
 
 <!-- SUBMENU CONTENT: MenuText (Plugins w/o list) -->  
     <block condition="{MenuText}" refresh="all,update,timeout,full,scroll" changed="{MenuText}">
-    <scrolltext  x1="315" x2="-280" y1="310" y2="-190" font="VDRSymbols Sans:Book@27,85" color="FontColor" >{MenuText}</scrolltext>
+    <scrolltext  x1="315" x2="-280" y1="310" y2="-190" font="VDRSymbols Sans:Book@27" color="FontColor" >{MenuText}</scrolltext>
     <scrollbar  x1="-260" x2="-240" y1="252" y2="-136" condition="or({CanScrollUp},{CanScrollDown})" color="BarFill" bgColor="Bar" />
    </block>
 <!-- SUBMENU CONTENT END: MenuText (Plugins w/o list) -->  
