@@ -744,7 +744,7 @@
    <!-- Background right-->
    <block refresh="all,update,timeout,full" changed="{MenuTitle}{DateTime}{ChannelName}{PresentTitle}" condition="or(equal({MenuTitle:clean},'VDR'),equal({MenuTitle:clean},trans('Commands')))" >
     <rectangle x1="-719" x2="-240" y1="252" y2="-135" color="MainSolid" />
-    <text  x1="-719" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37,105" >{DateTime:%H\:%M}</text>
+    <text  x1="-719" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
     <text  x1="-719" x2="-270" y1="281" y2="-770" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
     <!-- trans('oClock') -->
     <text  x1="-719" x2="-270" y1="322" y2="-737" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >{DateTime:%A}</text>
@@ -965,7 +965,7 @@
    <!-- Background right-->
    <block refresh="all,update,timeout,full" changed="{MenuTitle}{DateTime}{ChannelName}{PresentTitle}{ButtonRed}{ButtonGreen}{ButtonYellow}{ButtonBlue}" condition="or(or(or(equal({MenuTitle:clean},trans('Schedule')),equal({MenuTitle:clean},trans('Channels'))),equal({MenuTitle:clean},trans('Setup'))),equal({MenuTitle:clean},trans('Edit timer')))" >
     <rectangle x1="-600" x2="-240" y1="252" y2="-135" color="MainSolid" />
-    <text  x1="-600" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37,105" >{DateTime:%H\:%M}</text>
+    <text  x1="-600" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
     <text  x1="-600" x2="-270" y1="281" y2="-770" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
     <!-- trans('oClock') -->
     <text  x1="-600" x2="-270" y1="322" y2="-737" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >{DateTime:%A}</text>
