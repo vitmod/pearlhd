@@ -65,9 +65,8 @@ PearlHD.skin:
 	@if [ "$(CHANNELLOGORIGHT)" = "" ]; then sed -e '/ RCHANNELLOGO/d' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
 	@if [ "$(CHANNELLOGORIGHT)" = "1" ]; then sed -e '/NORCHANNELLOGO/d' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
 	@if [ "$(TIMERSWATCH)" = "" ]; then sed -e '/TIMERSWATCH/d' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
-	@if [ "$(HIDEOCLOCKTEXT)" = "1" ]; then sed -e '/OCLOCKTEXT/d' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
- 	@if [ "$(HIDEOCLOCKTEXT)" = "1" ]; then sed -e '/ OCLOCKTIME/d' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
 	@if [ "$(HIDEOCLOCKTEXT)" = "" ]; then sed -e '/NOOCLOCKTIME/d' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
+	@if [ "$(HIDEOCLOCKTEXT)" = "1" ]; then sed -e '/ OCLOCKTIME/d' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
 	@if [ "$(MENUITEHEIGHT)" != "" ]; then sed 's/item height="50"/item height="$(MENUITEHEIGHT)"/g' <$(SKIN).skin > $(SKIN).tmp;cp $(SKIN).tmp $(SKIN).skin; fi 
 	
 	@cat $(SKIN).skin | sed 's/BUTTON_1/$(BUTTON_1)/g' | sed 's/BUTTON_2/$(BUTTON_2)/g' | sed 's/BUTTON_3/$(BUTTON_3)/g' | sed 's/BUTTON_4/$(BUTTON_4)/g' > $(SKIN).tmp
