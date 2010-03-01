@@ -705,9 +705,10 @@
     <text x1="315" x2="-240" y1="257" y2="293" color="White" font="VDRSymbols Sans:Book@27" >{MessageError}</text>
    </block>
   <!-- TIMERSWATCH -->     <block refresh="all,update,timeout,list,full" changed="{MenuTitle}{DateTime}{MessageInfo}{MessageStatus}{MessageWarning}{MessageError}" condition="and(and(and(and(and(not(equal({MenuTitle:clean},trans('Timers'))),not(equal({MenuTitle:clean},trans('Recordings')))),and(not(equal({MenuTitle:clean},trans('Edit timer'))),not(equal({MenuTitle:clean},trans('Setup'))))),and(and(not(equal({MenuTitle:clean},trans('Channels'))),not(equal({MenuTitle:clean},trans('Schedule')))),and(not(equal({MenuTitle:clean},trans('Commands'))),not(equal({MenuTitle:clean},'VDR'))))),not({RecordingTitle})),not({PresentTitle}))" >    
-  <!-- TIMERSWATCH -->  <text  x1="-540" x2="-330" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
-  <!-- TIMERSWATCH -->  <text  x1="-330" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
-    <!-- trans('oClock') -->
+  <!-- TIMERSWATCH OCLOCKTIME -->   <text  x1="-540" x2="-330" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
+  <!-- TIMERSWATCH NOOCLOCKTIME --> <text  x1="-540" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
+  <!-- TIMERSWATCH OCLOCKTEXT-->    <text  x1="-330" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
+  <!-- trans('oClock') -->
   <!-- TIMERSWATCH -->   </block>
 <!-- SUBMENU END: Default -->
 
@@ -744,8 +745,9 @@
    <!-- Background right-->
    <block refresh="all,update,timeout,full" changed="{MenuTitle}{DateTime}{ChannelName}{PresentTitle}" condition="or(equal({MenuTitle:clean},'VDR'),equal({MenuTitle:clean},trans('Commands')))" >
     <rectangle x1="-719" x2="-240" y1="252" y2="-135" color="MainSolid" />
-    <text  x1="-719" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
-    <text  x1="-719" x2="-270" y1="281" y2="-770" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
+    <!-- OCLOCKTIME -->    <text  x1="-719" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
+    <!-- NOOCLOCKTIME -->  <text  x1="-719" x2="-270" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
+    <!-- OCLOCKTEXT -->    <text  x1="-719" x2="-270" y1="281" y2="-770" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
     <!-- trans('oClock') -->
     <text  x1="-719" x2="-270" y1="322" y2="-737" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >{DateTime:%A}</text>
     <text  x1="-719" x2="-270" y1="360" y2="-700" color="FontColor" align="right" font="VDRSymbols Sans:Book@20" >{DateTime:%e.%m.%Y}</text>
@@ -965,8 +967,9 @@
    <!-- Background right-->
    <block refresh="all,update,timeout,full" changed="{MenuTitle}{DateTime}{ChannelName}{PresentTitle}{ButtonRed}{ButtonGreen}{ButtonYellow}{ButtonBlue}" condition="or(or(or(equal({MenuTitle:clean},trans('Schedule')),equal({MenuTitle:clean},trans('Channels'))),equal({MenuTitle:clean},trans('Setup'))),equal({MenuTitle:clean},trans('Edit timer')))" >
     <rectangle x1="-600" x2="-240" y1="252" y2="-135" color="MainSolid" />
-    <text  x1="-600" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
-    <text  x1="-600" x2="-270" y1="281" y2="-770" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
+    <!-- OCLOCKTIME -->   <text  x1="-600" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
+    <!-- NOOCLOCKTIME --> <text  x1="-600" x2="-270" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
+    <!-- OCLOCKTEXT -->   <text  x1="-600" x2="-270" y1="281" y2="-770" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
     <!-- trans('oClock') -->
     <text  x1="-600" x2="-270" y1="322" y2="-737" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >{DateTime:%A}</text>
     <text  x1="-600" x2="-270" y1="360" y2="-700" color="FontColor" align="right" font="VDRSymbols Sans:Book@20" >{DateTime:%e.%m.%Y}</text>
@@ -1020,8 +1023,9 @@
      <text x1="315" x2="-240" y1="257" y2="293" color="White" font="VDRSymbols Sans:Book@27" >{MessageError}</text>
     </block>
     <!-- TIMERSWATCH --><block refresh="all,update,timeout,list,full" changed="{MenuTitle}{DateTime}{MessageInfo}{MessageStatus}{MessageWarning}{MessageError}" condition="or(equal({MenuTitle:clean},trans('Recordings')),equal({MenuTitle:clean},trans('Timers')))" >    
-    <!-- TIMERSWATCH --><text  x1="-540" x2="-330" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
-    <!-- TIMERSWATCH --><text  x1="-330" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
+    <!-- TIMERSWATCH OCLOCKTIME -->   <text  x1="-540" x2="-330" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
+    <!-- TIMERSWATCH NOOCLOCKTIME --> <text  x1="-540" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
+    <!-- TIMERSWATCH OCLOCKTEXT -->   <text  x1="-330" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
     <!-- trans('oClock') -->
     <!-- TIMERSWATCH --> </block>
     
@@ -1040,8 +1044,9 @@
 <!-- EPGIMAGES -->    <rectangle x1="-600" x2="-241" y1="-195" y2="-135" color="MainSolid" />
     
     
-    <text  x1="-600" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
-    <text  x1="-600" x2="-270" y1="281" y2="-770" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
+    <!-- OCLOCKTIME -->    <text  x1="-600" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
+    <!-- NOOCLOCKTIME -->  <text  x1="-600" x2="-270" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
+    <!-- OCLOCKTEXT -->    <text  x1="-600" x2="-270" y1="281" y2="-770" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
     <!-- trans('oClock') -->
     <text  x1="-600" x2="-270" y1="322" y2="-737" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >{DateTime:%A}</text>
     <text  x1="-600" x2="-270" y1="360" y2="-700" color="FontColor" align="right" font="VDRSymbols Sans:Book@20" >{DateTime:%e.%m.%Y}</text>
@@ -1069,8 +1074,9 @@
    <block condition="{RecordingName}" refresh="all,scroll" >
     <rectangle x1="240" x2="-600" y1="252" y2="-135" color="MainLightMR" />
     <rectangle x1="-600" x2="-241" y1="252" y2="-135" color="MainSolid" />
-    <text  x1="-600" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
-    <text  x1="-600" x2="-270" y1="281" y2="-770" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
+    <!-- OCLOCKTIME -->   <text  x1="-600" x2="-330" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
+    <!-- NOOCLOCKTIME --> <text  x1="-600" x2="-270" y1="271" y2="-780" color="FontColor" align="right" font="VDRSymbols Sans:Book@37" >{DateTime:%H\:%M}</text>
+    <!-- OCLOCKTEXT -->   <text  x1="-600" x2="-270" y1="281" y2="-770" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
     <!-- trans('oClock') -->
     <text  x1="-600" x2="-270" y1="322" y2="-737" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >{DateTime:%A}</text>
     <text  x1="-600" x2="-270" y1="360" y2="-700" color="FontColor" align="right" font="VDRSymbols Sans:Book@20" >{DateTime:%e.%m.%Y}</text>
