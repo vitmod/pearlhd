@@ -90,6 +90,7 @@ install: install-i18n
 	@cp  $(SKIN).skin $(DESTDIR)$(SKINDIR)
 	@cp  $(SKIN).colors $(DESTDIR)$(SKINDIR)
 	@cp  COPYING $(DESTDIR)$(SKINDIR)
+	@mkdir -p $(DESTDIR)$(THEMESDIR)
 	@cp themes/*.theme $(DESTDIR)$(THEMESDIR)
 	@if [ "$(YAEPGHD)" = "1" ]; then cp yaepghd/* $(DESTDIR)$(YAEPGHDDIR) -r; fi 
 
