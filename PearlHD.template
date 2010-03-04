@@ -750,7 +750,7 @@
     <!-- OCLOCKTEXT -->    <text  x1="-719" x2="-270" y1="281" y2="-770" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
     <!-- trans('oClock') -->
     <text  x1="-719" x2="-270" y1="322" y2="-737" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >{DateTime:%A}</text>
-    <text  x1="-719" x2="-270" y1="360" y2="-700" color="FontColor" align="right" font="VDRSymbols Sans:Book@20" >{DateTime:%e.%m.%Y}</text>
+    <text  x1="-719" x2="-270" y1="360" y2="-700" color="FontColor" align="right" font="VDRSymbols Sans:Book@20" >{DateTime:%x}</text>
         
     <!-- Next timer-->
 <!-- RECTITLEINFOBOTTOM LAYOUT-->
