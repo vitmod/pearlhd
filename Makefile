@@ -94,7 +94,10 @@ install: install-i18n
 	@cp  COPYING $(DESTDIR)$(SKINDIR)
 	@mkdir -p $(DESTDIR)$(THEMESDIR)
 	@cp themes/*.theme $(DESTDIR)$(THEMESDIR)
-	@if [ "$(YAEPGHD)" = "1" ]; then cp yaepghd/* $(DESTDIR)$(YAEPGHDDIR) -r; fi 
+	@if [ "$(YAEPGHD)" = "1" ]; then\
+	  mkdir -p $(DESTDIR)$(YAEPGHDDIR) ;\
+	  cp yaepghd/* $(DESTDIR)$(YAEPGHDDIR) -r;\
+	fi 
 
 clean:
 	@-rm -rf $(LOCALEDIR) $(I18Npot) $(SKIN).skin *~
