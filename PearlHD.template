@@ -1,9 +1,21 @@
 <!--
  
-  (c) 10.10.2009 mapovi >> vdrportal.de
- 
-  *** NOT FOR COMMERCIAL USE! ***
- 
+    PearlHD skin for text2skin for vdr
+    http://www.vdr-wiki.de/wiki/index.php/PearlHD
+    Copyright (C) 2010  don_jan at web.de (mapovi - vdrportal.de) 
+
+    This program is free software; you can redistribute it and/or modify it under the terms of 
+    the GNU General Public License as published by the Free Software Foundation; either 
+    version 2 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+    without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+    See the GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along with this program; 
+    if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, 
+    MA 02110, USA
+
 -->
 <?xml version="1.0"?>
 <skin version="1.1" name="PearlHD" screenBase="relative" >
@@ -704,7 +716,7 @@
     <text x1="315" x2="-240" y1="257" y2="293" color="White" font="VDRSymbols Sans:Book@27" >{MessageWarning}</text>
     <text x1="315" x2="-240" y1="257" y2="293" color="White" font="VDRSymbols Sans:Book@27" >{MessageError}</text>
    </block>
-  <!-- TIMERSWATCH -->     <block refresh="all,update,timeout,list,full" changed="{MenuTitle}{DateTime}{MessageInfo}{MessageStatus}{MessageWarning}{MessageError}" condition="and(and(and(and(and(not(equal({MenuTitle:clean},trans('Timers'))),not(equal({MenuTitle:clean},trans('Recordings')))),and(not(equal({MenuTitle:clean},trans('Edit timer'))),not(equal({MenuTitle:clean},trans('Setup'))))),and(and(not(equal({MenuTitle:clean},trans('Channels'))),not(equal({MenuTitle:clean},trans('Schedule')))),and(not(equal({MenuTitle:clean},trans('Commands'))),not(equal({MenuTitle:clean},'VDR'))))),not({RecordingTitle})),not({PresentTitle}))" >    
+  <!-- TIMERSWATCH -->     <block condition="and(and(and(and(and(not(equal({MenuTitle:clean},trans('Timers'))),not(equal({MenuTitle:clean},trans('Recordings')))),and(not(equal({MenuTitle:clean},trans('Edit timer'))),not(equal({MenuTitle:clean},trans('Setup'))))),and(and(not(equal({MenuTitle:clean},trans('Channels'))),not(equal({MenuTitle:clean},trans('Schedule')))),and(not(equal({MenuTitle:clean},trans('Commands'))),not(equal({MenuTitle:clean},'VDR'))))),not({RecordingTitle})),not({PresentTitle}))" >    
   <!-- TIMERSWATCH OCLOCKTIME -->   <text  x1="-540" x2="-330" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
   <!-- TIMERSWATCH NOOCLOCKTIME --> <text  x1="-540" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
   <!-- TIMERSWATCH OCLOCKTEXT-->    <text  x1="-330" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
@@ -1022,7 +1034,7 @@
      <text x1="315" x2="-240" y1="257" y2="293" color="White" font="VDRSymbols Sans:Book@27" >{MessageWarning}</text>
      <text x1="315" x2="-240" y1="257" y2="293" color="White" font="VDRSymbols Sans:Book@27" >{MessageError}</text>
     </block>
-    <!-- TIMERSWATCH --><block refresh="all,update,timeout,list,full" changed="{MenuTitle}{DateTime}{MessageInfo}{MessageStatus}{MessageWarning}{MessageError}" condition="or(equal({MenuTitle:clean},trans('Recordings')),equal({MenuTitle:clean},trans('Timers')))" >    
+    <!-- TIMERSWATCH --><block condition="or(equal({MenuTitle:clean},trans('Recordings')),equal({MenuTitle:clean},trans('Timers')))" >    
     <!-- TIMERSWATCH OCLOCKTIME -->   <text  x1="-540" x2="-330" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
     <!-- TIMERSWATCH NOOCLOCKTIME --> <text  x1="-540" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" bgColor="MainLight" font="VDRSymbols Sans:Book@27" >{DateTime:%H\:%M} </text>
     <!-- TIMERSWATCH OCLOCKTEXT -->   <text  x1="-330" x2="-270" y1="-190" y2="-150" color="FontColor" align="right" font="VDRSymbols Sans:Book@27" >oClock</text>
@@ -1268,18 +1280,18 @@
      </block>
     </block>
    
-   <list refresh="all,list,update,timeout" changed="{AudioChannel}"  x1="480" x2="-480" y1="460" y2="-390" >
+   <list   x1="480" x2="-480" y1="460" y2="-390" >
     <item height="50" />
-    <rectangle  refresh="all,list,timeout,update" changed="{AudioChannel}" x1="74" x2="-1" y1="0" y2="-6" condition="{IsMenuItem}" color="Lolight" /> 
-    <ellipse    refresh="all,list,timeout,update" changed="{AudioChannel}" x1="60" x2="74" y1="0" y2="15" condition="{IsMenuItem}" color="Lolight"  arc="2" /> 
-    <rectangle  refresh="all,list,timeout,update" changed="{AudioChannel}" x1="60" x2="74" y1="14" y2="-21" condition="{IsMenuItem}" color="Lolight" /> 
-    <ellipse    refresh="all,list,timeout,update" changed="{AudioChannel}" x1="60" x2="74" y1="-21" y2="-6" condition="{IsMenuItem}" color="Lolight"  arc="3" /> 
-    <rectangle  refresh="all,list,timeout,update" changed="{AudioChannel}" x1="74" x2="-1" y1="0" y2="-6" condition="{MenuCurrent}" color="MainSolid" /> 
-    <ellipse    refresh="all,list,timeout,update" changed="{AudioChannel}" x1="60" x2="74" y1="0" y2="15" condition="{MenuCurrent}" color="MainSolid"  arc="2" /> 
-    <rectangle  refresh="all,list,timeout,update" changed="{AudioChannel}" x1="60" x2="74" y1="14" y2="-21" condition="{MenuCurrent}" color="MainSolid" /> 
-    <ellipse    refresh="all,list,timeout,update" changed="{AudioChannel}" x1="60" x2="74" y1="-21" y2="-6" condition="{MenuCurrent}" color="MainSolid"  arc="3" /> 
-    <text  refresh="all,list,timeout,update" changed="{AudioChannel}" x1="80" x2="-21" y1="5" y2="50" color="FontColorInactive" font="VDRSymbols Sans:Book@27" align="right" >{MenuItem}</text>
-    <text  refresh="all,list,timeout,update" changed="{AudioChannel}" x1="80" x2="-21" y1="5" y2="50" color="FontColor" font="VDRSymbols Sans:Book@27" align="right" >{MenuCurrent}</text>
+    <rectangle   x1="74" x2="-1" y1="0" y2="-6" condition="{IsMenuItem}" color="Lolight" /> 
+    <ellipse     x1="60" x2="74" y1="0" y2="15" condition="{IsMenuItem}" color="Lolight"  arc="2" /> 
+    <rectangle   x1="60" x2="74" y1="14" y2="-21" condition="{IsMenuItem}" color="Lolight" /> 
+    <ellipse     x1="60" x2="74" y1="-21" y2="-6" condition="{IsMenuItem}" color="Lolight"  arc="3" /> 
+    <rectangle   x1="74" x2="-1" y1="0" y2="-6" condition="{MenuCurrent}" color="MainSolid" /> 
+    <ellipse     x1="60" x2="74" y1="0" y2="15" condition="{MenuCurrent}" color="MainSolid"  arc="2" /> 
+    <rectangle   x1="60" x2="74" y1="14" y2="-21" condition="{MenuCurrent}" color="MainSolid" /> 
+    <ellipse     x1="60" x2="74" y1="-21" y2="-6" condition="{MenuCurrent}" color="MainSolid"  arc="3" /> 
+    <text   x1="80" x2="-21" y1="5" y2="50" color="FontColorInactive" font="VDRSymbols Sans:Book@27" align="right" >{MenuItem}</text>
+    <text   x1="80" x2="-21" y1="5" y2="50" color="FontColor" font="VDRSymbols Sans:Book@27" align="right" >{MenuCurrent}</text>
    </list>
  </display>
 </skin>
